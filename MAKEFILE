@@ -1,0 +1,46 @@
+###########################################################################
+#                                                                         #
+# MAKE FILE FOR NBLOAD.EXE                                                #
+#                                                                         #
+# NOTES:                                                                  #
+#                                                                         #
+#  To enable the C Set/2 memory management debugging code, uncomment the  #
+#  DEBUGALLOC macro. The debugging info will be sent to NBLOAD.DBG.       #
+#                                                                         #
+# HISTORY:                                                                #
+#                                                                         #
+#  10-17-92 - created                                                     #
+#                                                                         #
+#  Rick Fishman                                                           #
+#  Code Blazers, Inc.                                                     #
+#  4113 Apricot                                                           #
+#  Irvine, CA. 92720                                                      #
+#  CIS ID: 72251,750                                                      #
+#                                                                         #
+###########################################################################
+
+#DEBUGALLOC=-D__DEBUG_ALLOC__
+
+BASE=nbload
+
+CFLAGS=/Q+ /Ss /W3 /Kbcepr /Gm- /Gd- /Ti+ /O- $(DEBUGALLOC) /C
+LFLAGS=/NOI /MAP /DE /NOL /A:16 /EXEPACK /BASE:65536
+
+.SUFFIXES: .c
+
+.c.obj:
+    icc $(CFLAGS) $*.c
+
+$(BASE).exe: $*.obj $*.def $*.res
+    link386 $(LFLAGS) $*,,, os2386, $*
+    rc $*.res $*.exe
+
+$(BASE).res: $*.rc $*.dlg
+    rc -r $*
+
+$(BASE).obj: $*.c $*.h
+
+###########################################################################
+#                       E N D   O F   S O U R C E                         #
+###########################################################################
+

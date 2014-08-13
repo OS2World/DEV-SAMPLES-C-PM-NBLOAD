@@ -1,0 +1,395 @@
+DLGINCLUDE 1 "G:\SOURCE\C32\nbbase\NBBASE.H"
+
+DLGTEMPLATE IDD_PAGE1 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 1", IDD_PAGE1, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_1, 62, 23, 123, 8, ES_MARGIN | WS_GROUP
+        MLE             "", 1002, 9, 89, 178, 62, MLS_WORDWRAP | MLS_HSCROLL |
+                        MLS_VSCROLL | WS_GROUP
+        MLE             "", 1003, 9, 36, 178, 50, MLS_WORDWRAP | MLS_HSCROLL |
+                        MLS_VSCROLL | WS_GROUP
+        PUSHBUTTON      "~Undo", 1004, 62, 4, 40, 14
+        PUSHBUTTON      "~Help", 1005, 108, 4, 40, 14
+        LTEXT           "Enter info:", 1006, 13, 23, 46, 8
+    END
+END
+
+DLGTEMPLATE IDD_PAGE2A LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 2A", IDD_PAGE2A, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_2A, 90, 38, 94, 8, ES_MARGIN | WS_GROUP
+        CONTROL         "", 2102, 10, 106, 170, 40, WC_CONTAINER,
+                        CCS_SINGLESEL | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        GROUPBOX        "Group", 2103, 13, 62, 113, 40
+        AUTORADIOBUTTON "Choice Number 1", 2104, 22, 85, 93, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Choice Number 2", 2105, 22, 75, 94, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Choice Number 3", 2106, 22, 65, 91, 10, WS_TABSTOP
+        PUSHBUTTON      "~Undo", 2107, 58, 8, 40, 14
+        PUSHBUTTON      "~Help", 2108, 104, 8, 40, 14
+        LTEXT           "Enter vital info:", 2109, 18, 38, 64, 8
+    END
+END
+
+DLGTEMPLATE IDD_PAGE2B LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 2B", IDD_PAGE2B, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_2B, 92, 36, 90, 8, ES_MARGIN | WS_GROUP
+        CONTROL         "", 2202, 20, 138, 32, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2203, 55, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2204, 86, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2205, 117, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2206, 149, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        COMBOBOX        "", 2207, 16, 94, 168, 35, WS_GROUP
+        GROUPBOX        "Group", 2208, 17, 52, 168, 40
+        AUTOCHECKBOX    "Flag Number 1", 2209, 23, 74, 72, 10
+        AUTOCHECKBOX    "Flag Number 2", 2210, 23, 65, 70, 10
+        AUTOCHECKBOX    "Flag Number 3", 2211, 23, 56, 72, 10
+        AUTOCHECKBOX    "Flag Number 4", 2212, 102, 74, 76, 10
+        AUTOCHECKBOX    "Flag Number 5", 2213, 102, 65, 76, 10
+        AUTOCHECKBOX    "Flag Number 6", 2214, 102, 55, 78, 10
+        LTEXT           "What did U say?:", 2215, 14, 36, 72, 8
+        PUSHBUTTON      "~Undo", 2216, 58, 4, 40, 14
+        PUSHBUTTON      "~Help", 2217, 104, 4, 40, 14
+    END
+END
+
+DLGTEMPLATE IDD_PAGE3 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 3", IDD_PAGE3, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_3, 84, 24, 105, 8, ES_MARGIN | WS_GROUP
+        LISTBOX         3002, 14, 113, 172, 40
+        MLE             "", 3003, 14, 70, 173, 40, MLS_WORDWRAP |
+                        MLS_HSCROLL | MLS_VSCROLL | WS_GROUP
+        CONTROL         "", 3004, 13, 54, 175, 16, WC_SLIDER, SLS_HORIZONTAL |
+                        SLS_CENTER | SLS_SNAPTOINCREMENT | SLS_HOMELEFT |
+                        SLS_PRIMARYSCALE1 | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+                        CTLDATA 12, 0, 100, 0, 100, 0
+        CONTROL         "", 3005, 20, 37, 165, 18, WC_VALUESET,
+                        VS_COLORINDEX | VS_BORDER | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+                        CTLDATA 8, 0, 2, 8
+        LTEXT           "Hello? Hello?", 3006, 18, 23, 61, 8
+        PUSHBUTTON      "~Undo", 3007, 55, 6, 40, 14
+        PUSHBUTTON      "~Help", 3008, 101, 6, 40, 14
+    END
+END
+
+DLGTEMPLATE IDD_PAGE4A LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 4A", IDD_PAGE4A, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_4A, 62, 23, 123, 8, ES_MARGIN | WS_GROUP
+        MLE             "", 1002, 9, 89, 178, 62, MLS_WORDWRAP | MLS_HSCROLL |
+                        MLS_VSCROLL | WS_GROUP
+        MLE             "", 1003, 9, 36, 178, 50, MLS_WORDWRAP | MLS_HSCROLL |
+                        MLS_VSCROLL | WS_GROUP
+        PUSHBUTTON      "~Undo", 1004, 62, 4, 40, 14
+        PUSHBUTTON      "~Help", 1005, 108, 4, 40, 14
+        LTEXT           "Enter info:", 1006, 13, 23, 46, 8
+    END
+END
+
+DLGTEMPLATE IDD_PAGE4B LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 4B", IDD_PAGE4B, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_4B, 90, 38, 94, 8, ES_MARGIN | WS_GROUP
+        CONTROL         "", 2102, 10, 106, 170, 40, WC_CONTAINER,
+                        CCS_SINGLESEL | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        GROUPBOX        "Group", 2103, 13, 62, 113, 40
+        AUTORADIOBUTTON "Choice Number 1", 2104, 22, 85, 93, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Choice Number 2", 2105, 22, 75, 94, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Choice Number 3", 2106, 22, 65, 91, 10, WS_TABSTOP
+        PUSHBUTTON      "~Undo", 2107, 58, 8, 40, 14
+        PUSHBUTTON      "~Help", 2108, 104, 8, 40, 14
+        LTEXT           "Enter vital info:", 2109, 18, 38, 64, 8
+    END
+END
+
+DLGTEMPLATE IDD_PAGE4C LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 4C", IDD_PAGE4C, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_4C, 92, 36, 90, 8, ES_MARGIN | WS_GROUP
+        CONTROL         "", 2202, 20, 138, 32, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2203, 55, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2204, 86, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2205, 117, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2206, 149, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        COMBOBOX        "", 2207, 16, 94, 168, 35, WS_GROUP
+        GROUPBOX        "Group", 2208, 17, 52, 168, 40
+        AUTOCHECKBOX    "Flag Number 1", 2209, 23, 74, 72, 10
+        AUTOCHECKBOX    "Flag Number 2", 2210, 23, 65, 70, 10
+        AUTOCHECKBOX    "Flag Number 3", 2211, 23, 56, 72, 10
+        AUTOCHECKBOX    "Flag Number 4", 2212, 102, 74, 76, 10
+        AUTOCHECKBOX    "Flag Number 5", 2213, 102, 65, 76, 10
+        AUTOCHECKBOX    "Flag Number 6", 2214, 102, 55, 78, 10
+        LTEXT           "What did U say?:", 2215, 14, 36, 72, 8
+        PUSHBUTTON      "~Undo", 2216, 58, 4, 40, 14
+        PUSHBUTTON      "~Help", 2217, 104, 4, 40, 14
+    END
+END
+
+DLGTEMPLATE IDD_PAGE4D LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 4D", IDD_PAGE4D, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_4D, 84, 24, 105, 8, ES_MARGIN | WS_GROUP
+        LISTBOX         3002, 14, 113, 172, 40
+        MLE             "", 3003, 14, 70, 173, 40, MLS_WORDWRAP |
+                        MLS_HSCROLL | MLS_VSCROLL | WS_GROUP
+        CONTROL         "", 3004, 13, 54, 175, 16, WC_SLIDER, SLS_HORIZONTAL |
+                        SLS_CENTER | SLS_SNAPTOINCREMENT | SLS_HOMELEFT |
+                        SLS_PRIMARYSCALE1 | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+                        CTLDATA 12, 0, 100, 0, 100, 0
+        CONTROL         "", 3005, 20, 37, 165, 18, WC_VALUESET,
+                        VS_COLORINDEX | VS_BORDER | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+                        CTLDATA 8, 0, 2, 8
+        LTEXT           "Hello? Hello?", 3006, 18, 23, 61, 8
+        PUSHBUTTON      "~Undo", 3007, 55, 6, 40, 14
+        PUSHBUTTON      "~Help", 3008, 101, 6, 40, 14
+    END
+END
+
+DLGTEMPLATE IDD_PAGE5 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 5", IDD_PAGE5, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_5, 62, 23, 123, 8, ES_MARGIN | WS_GROUP
+        MLE             "", 1002, 9, 89, 178, 62, MLS_WORDWRAP | MLS_HSCROLL |
+                        MLS_VSCROLL | WS_GROUP
+        MLE             "", 1003, 9, 36, 178, 50, MLS_WORDWRAP | MLS_HSCROLL |
+                        MLS_VSCROLL | WS_GROUP
+        PUSHBUTTON      "~Undo", 1004, 62, 4, 40, 14
+        PUSHBUTTON      "~Help", 1005, 108, 4, 40, 14
+        LTEXT           "Enter info:", 1006, 13, 23, 46, 8
+    END
+END
+
+DLGTEMPLATE IDD_PAGE6A LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 6A", IDD_PAGE6A, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_6A, 90, 38, 94, 8, ES_MARGIN | WS_GROUP
+        CONTROL         "", 2102, 10, 106, 170, 40, WC_CONTAINER,
+                        CCS_SINGLESEL | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        GROUPBOX        "Group", 2103, 13, 62, 113, 40
+        AUTORADIOBUTTON "Choice Number 1", 2104, 22, 85, 93, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Choice Number 2", 2105, 22, 75, 94, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Choice Number 3", 2106, 22, 65, 91, 10, WS_TABSTOP
+        PUSHBUTTON      "~Undo", 2107, 58, 8, 40, 14
+        PUSHBUTTON      "~Help", 2108, 104, 8, 40, 14
+        LTEXT           "Enter vital info:", 2109, 18, 38, 64, 8
+    END
+END
+
+DLGTEMPLATE IDD_PAGE6B LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 6B", IDD_PAGE6B, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_6B, 92, 36, 90, 8, ES_MARGIN | WS_GROUP
+        CONTROL         "", 2202, 20, 138, 32, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2203, 55, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2204, 86, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2205, 117, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2206, 149, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        COMBOBOX        "", 2207, 16, 94, 168, 35, WS_GROUP
+        GROUPBOX        "Group", 2208, 17, 52, 168, 40
+        AUTOCHECKBOX    "Flag Number 1", 2209, 23, 74, 72, 10
+        AUTOCHECKBOX    "Flag Number 2", 2210, 23, 65, 70, 10
+        AUTOCHECKBOX    "Flag Number 3", 2211, 23, 56, 72, 10
+        AUTOCHECKBOX    "Flag Number 4", 2212, 102, 74, 76, 10
+        AUTOCHECKBOX    "Flag Number 5", 2213, 102, 65, 76, 10
+        AUTOCHECKBOX    "Flag Number 6", 2214, 102, 55, 78, 10
+        LTEXT           "What did U say?:", 2215, 14, 36, 72, 8
+        PUSHBUTTON      "~Undo", 2216, 58, 4, 40, 14
+        PUSHBUTTON      "~Help", 2217, 104, 4, 40, 14
+    END
+END
+
+DLGTEMPLATE IDD_PAGE6C LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 6C", IDD_PAGE6C, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_6C, 84, 24, 105, 8, ES_MARGIN | WS_GROUP
+        LISTBOX         3002, 14, 113, 172, 40
+        MLE             "", 3003, 14, 70, 173, 40, MLS_WORDWRAP |
+                        MLS_HSCROLL | MLS_VSCROLL | WS_GROUP
+        CONTROL         "", 3004, 13, 54, 175, 16, WC_SLIDER, SLS_HORIZONTAL |
+                        SLS_CENTER | SLS_SNAPTOINCREMENT | SLS_HOMELEFT |
+                        SLS_PRIMARYSCALE1 | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+                        CTLDATA 12, 0, 100, 0, 100, 0
+        CONTROL         "", 3005, 20, 37, 165, 18, WC_VALUESET,
+                        VS_COLORINDEX | VS_BORDER | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+                        CTLDATA 8, 0, 2, 8
+        LTEXT           "Hello? Hello?", 3006, 18, 23, 61, 8
+        PUSHBUTTON      "~Undo", 3007, 55, 6, 40, 14
+        PUSHBUTTON      "~Help", 3008, 101, 6, 40, 14
+    END
+END
+
+DLGTEMPLATE IDD_PAGE71 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 71", IDD_PAGE71, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_71, 62, 23, 123, 8, ES_MARGIN | WS_GROUP
+        MLE             "", 1002, 9, 89, 178, 62, MLS_WORDWRAP | MLS_HSCROLL |
+                        MLS_VSCROLL | WS_GROUP
+        MLE             "", 1003, 9, 36, 178, 50, MLS_WORDWRAP | MLS_HSCROLL |
+                        MLS_VSCROLL | WS_GROUP
+        PUSHBUTTON      "~Undo", 1004, 62, 4, 40, 14
+        PUSHBUTTON      "~Help", 1005, 108, 4, 40, 14
+        LTEXT           "Enter info:", 1006, 13, 23, 46, 8
+    END
+END
+
+DLGTEMPLATE IDD_PAGE72 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 72", IDD_PAGE72, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_72, 90, 38, 94, 8, ES_MARGIN | WS_GROUP
+        CONTROL         "", 2102, 10, 106, 170, 40, WC_CONTAINER,
+                        CCS_SINGLESEL | WS_GROUP | WS_TABSTOP | WS_VISIBLE
+        GROUPBOX        "Group", 2103, 13, 62, 113, 40
+        AUTORADIOBUTTON "Choice Number 1", 2104, 22, 85, 93, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Choice Number 2", 2105, 22, 75, 94, 10, WS_TABSTOP
+        AUTORADIOBUTTON "Choice Number 3", 2106, 22, 65, 91, 10, WS_TABSTOP
+        PUSHBUTTON      "~Undo", 2107, 58, 8, 40, 14
+        PUSHBUTTON      "~Help", 2108, 104, 8, 40, 14
+        LTEXT           "Enter vital info:", 2109, 18, 38, 64, 8
+    END
+END
+
+DLGTEMPLATE IDD_PAGE73 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 73", IDD_PAGE73, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_73, 92, 36, 90, 8, ES_MARGIN | WS_GROUP
+        CONTROL         "", 2202, 20, 138, 32, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2203, 55, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2204, 86, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2205, 117, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        CONTROL         "", 2206, 149, 138, 29, 12, WC_SPINBUTTON,
+                        SPBS_ALLCHARACTERS | SPBS_MASTER | SPBS_SERVANT |
+                        SPBS_JUSTDEFAULT | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+        COMBOBOX        "", 2207, 16, 94, 168, 35, WS_GROUP
+        GROUPBOX        "Group", 2208, 17, 52, 168, 40
+        AUTOCHECKBOX    "Flag Number 1", 2209, 23, 74, 72, 10
+        AUTOCHECKBOX    "Flag Number 2", 2210, 23, 65, 70, 10
+        AUTOCHECKBOX    "Flag Number 3", 2211, 23, 56, 72, 10
+        AUTOCHECKBOX    "Flag Number 4", 2212, 102, 74, 76, 10
+        AUTOCHECKBOX    "Flag Number 5", 2213, 102, 65, 76, 10
+        AUTOCHECKBOX    "Flag Number 6", 2214, 102, 55, 78, 10
+        LTEXT           "What did U say?:", 2215, 14, 36, 72, 8
+        PUSHBUTTON      "~Undo", 2216, 58, 4, 40, 14
+        PUSHBUTTON      "~Help", 2217, 104, 4, 40, 14
+    END
+END
+
+DLGTEMPLATE IDD_PAGE74 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG  "Page 74", IDD_PAGE74, 0, 0, 197, 163, FS_NOBYTEALIGN | NOT
+            FS_DLGBORDER
+    BEGIN
+        ENTRYFIELD      "", EF_74, 84, 24, 105, 8, ES_MARGIN | WS_GROUP
+        LISTBOX         3002, 14, 113, 172, 40
+        MLE             "", 3003, 14, 70, 173, 40, MLS_WORDWRAP |
+                        MLS_HSCROLL | MLS_VSCROLL | WS_GROUP
+        CONTROL         "", 3004, 13, 54, 175, 16, WC_SLIDER, SLS_HORIZONTAL |
+                        SLS_CENTER | SLS_SNAPTOINCREMENT | SLS_HOMELEFT |
+                        SLS_PRIMARYSCALE1 | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+                        CTLDATA 12, 0, 100, 0, 100, 0
+        CONTROL         "", 3005, 20, 37, 165, 18, WC_VALUESET,
+                        VS_COLORINDEX | VS_BORDER | WS_GROUP | WS_TABSTOP |
+                        WS_VISIBLE
+                        CTLDATA 8, 0, 2, 8
+        LTEXT           "Hello? Hello?", 3006, 18, 23, 61, 8
+        PUSHBUTTON      "~Undo", 3007, 55, 6, 40, 14
+        PUSHBUTTON      "~Help", 3008, 101, 6, 40, 14
+    END
+END
+
+

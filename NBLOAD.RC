@@ -1,0 +1,32 @@
+/*********************************************************************
+ *                                                                   *
+ * MODULE NAME :  nbload.rc              AUTHOR:  Rick Fishman       *
+ * DATE WRITTEN:  10-18-92                                           *
+ *                                                                   *
+ * DESCRIPTION:                                                      *
+ *                                                                   *
+ *  Resource file for NBLOAD.EXE.                                    *
+ *                                                                   *
+ * HISTORY:                                                          *
+ *                                                                   *
+ *  10-18-92 - File Created                                          *
+ *                                                                   *
+ *  Rick Fishman                                                     *
+ *  Code Blazers, Inc.                                               *
+ *  4113 Apricot                                                     *
+ *  Irvine, CA. 92720                                                *
+ *  CIS ID: 72251,750                                                *
+ *                                                                   *
+ *********************************************************************/
+
+#include <os2.h>
+#include "nbload.h"
+
+ICON ID_NBWINFRAME nbload.ico
+
+rcinclude nbload.dlg
+
+/*********************************************************************
+ *                    E N D   O F   S O U R C E                      *
+ *********************************************************************/
+

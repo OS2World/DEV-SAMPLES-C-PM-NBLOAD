@@ -1,0 +1,43 @@
+NBLOAD.EXE is a sample program that demonstrates different ways of loading the
+pages of a Notebook control. Since a Notebook can have many pages and each page
+is associated with a window, it is important to use a good technique for
+creating the windows so that performance is optimized. A notebook with just a
+few pages need not worry about different techniques because no matter how the
+windows are created and associated with pages, performance will not suffer.
+
+This sample associates a dialog box with each Notebook page. It allows you to
+load these dialog boxes 3 ways by a command line parameter.
+
+    Parameter         Technique
+    ---------         ---------
+        0             Load dialogs on demand (only when the user has selected
+                      the page that should be associated with the dialog).
+
+        1             On Demand with timer support. Start a timer. When you
+                      get a WM_TIMER message, load the next dialog that hasn't
+                      yet been loaded. When all dialogs are loaded, stop the
+                      timer. If the user selects a page that has not yet been
+                      loaded, load it at that time.
+
+        2             Load all dialogs at program initialization time.
+
+By running the program with different commandline parameters, you will notice
+the difference in startup speed vs. page-flipping speed. Actually, I've noticed
+that the amount of time that it takes to load the dialog and associate it with
+a page really is not a bad performance hit when the user selects a page. But
+the time it takes to load all dialogs at program initialization can be bad, so
+I choose to create my Notebooks always using a Load-On-Demand technique. I
+haven't found the timer technique to be of much benefit.
+
+I wrote this program to test these techniques out. You may want to tailor it
+with your own dialogs to test your notebook for performance. In any case, I
+hope it will be of some use.
+
+Rick Fishman
+Code Blazers, Inc.
+4113 Apricot
+Irvine, CA 92720
+
+CIS ID: 72251,750
+
+
